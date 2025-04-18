@@ -2,7 +2,7 @@
   <div class="background-image"></div>
   <div class="overlay-content">
     <div class="logo">
-      <img src="{{ 'logo.svg' | asset_url }}" alt="Logo" />
+      <img src="{{ 'background.png' | asset_url }}" alt="Logo">
     </div>
     <nav class="navigation">
       <ul>
@@ -13,12 +13,15 @@
       </ul>
     </nav>
     <div class="search-bar">
-      <input type="text" placeholder="Search products..." aria-label="Search" />
+      <input type="text" placeholder="Search products..." aria-label="Search">
       <button type="submit">Search</button>
     </div>
     <div class="product-link">
       <a href="{{ routes.products }}">
-        <img src="{{ 'https://cdn.shopify.com/s/files/1/0932/7978/1199/files/background.png?v=1744994406' | asset_url }}" alt="Product" />
+        <img
+          src="{{ 'https://cdn.shopify.com/s/files/1/0932/7978/1199/files/background.png?' | asset_url }}"
+          alt="Product"
+        >
       </a>
     </div>
   </div>
