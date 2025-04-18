@@ -1,17 +1,25 @@
 <div class="header">
-  <div class="logo">
-    <img src="{{ 'logo.svg' | asset_url }}" alt="Logo" />
-  </div>
-  <nav class="navigation">
-    <ul>
-      <li><a href="{{ routes.home }}">Home</a></li>
-      <li><a href="{{ routes.collections }}">Collections</a></li>
-      <li><a href="{{ routes.products }}">Products</a></li>
-      <li><a href="{{ routes.cart }}">Cart</a></li>
-    </ul>
-  </nav>
-  <div class="search-bar">
-    <input type="text" placeholder="Search products..." aria-label="Search" />
-    <button type="submit">Search</button>
+  <div class="background-image"></div>
+  <div class="overlay-content">
+    <div class="logo">
+      <img src="{{ 'logo.svg' | asset_url }}" alt="Logo" />
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="{{ routes.home }}">Home</a></li>
+        <li><a href="{{ routes.collections }}">Collections</a></li>
+        <li><a href="{{ routes.products }}">Products</a></li>
+        <li><a href="{{ routes.cart }}">Cart</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search products..." aria-label="Search" />
+      <button type="submit">Search</button>
+    </div>
+    <div class="product-link">
+      <a href="{{ routes.products }}">
+        <img src="{{ '/workspaces/Lyonce_Website/assets/images/background.png' | asset_url }}" alt="Product" />
+      </a>
+    </div>
   </div>
 </div>
