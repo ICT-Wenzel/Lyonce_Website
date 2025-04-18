@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="{{ 'styles.css' | asset_url }}">
+</head>
+<body>
+    <header>
+        {% include 'header' %}
+    </header>
+    
+    <main>
+        <h1>Checkout</h1>
+        <form method="post" action="/checkout" id="checkout-form">
+            <div class="customer-info">
+                <h2>Customer Information</h2>
+                <input type="text" name="customer[name]" placeholder="Full Name" required>
+                <input type="email" name="customer[email]" placeholder="Email" required>
+            </div>
+            <div class="shipping-address">
+                <h2>Shipping Address</h2>
+                <input type="text" name="shipping[address]" placeholder="Address" required>
+                <input type="text" name="shipping[city]" placeholder="City" required>
+                <input type="text" name="shipping[zip]" placeholder="Zip Code" required>
+            </div>
+            <div class="payment-info">
+                <h2>Payment Information</h2>
+                <input type="text" name="payment[card_number]" placeholder="Card Number" required>
+                <input type="text" name="payment[expiry]" placeholder="Expiry Date" required>
+                <input type="text" name="payment[cvc]" placeholder="CVC" required>
+            </div>
+            <button type="submit">Complete Purchase</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; {{ 'now' | date: '%Y' }} Your Store Name. All rights reserved.</p>
+    </footer>
+    
+    <script src="{{ 'scripts.js' | asset_url }}"></script>
+</body>
+</html>

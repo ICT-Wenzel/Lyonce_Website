@@ -1,0 +1,13 @@
+{% assign collection = collections[collection.handle] %}
+{% if collection.products.size > 0 %}
+  <h1>{{ collection.title }}</h1>
+  <div class="collection-description">{{ collection.description }}</div>
+  <div class="product-grid">
+    {% for product in collection.products %}
+      {% include 'product-card' with product %}
+    {% endfor %}
+  </div>
+{% else %}
+  <h1>{{ collection.title }}</h1>
+  <p>No products found in this collection.</p>
+{% endif %}

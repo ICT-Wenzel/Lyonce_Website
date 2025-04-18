@@ -1,0 +1,28 @@
+{% assign product = all_products[product.handle] %}
+{% if product %}
+  <div class="product">
+    <h1>{{ product.title }}</h1>
+    <div class="product-images">
+      {% for image in product.images %}
+        <img src="{{ image | img_url: 'large' }}" alt="{{ product.title }}">
+      {% endfor %}
+    </div>
+    <div class="product-description">
+      {{ product.description | escape }}
+    </div>
+    <div class="product-price">
+      {% if product.compare_at_price > product.price %}
+        <span class="price sale">{{ product.price | money }}</span>
+        <span class="compare-at-price">{{ product.compare_at_price | money }}</span>
+      {% else %}
+        <span class="price">{{ product.price | money }}</span>
+      {% endif %}
+    </div>
+    <form method="post" action="/cart/add">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+      <button type="submit">Add to Cart</button>
+    </form>
+  </div>
+{% else %}
+  <p>Product not found.</p>
+{% endif %}
