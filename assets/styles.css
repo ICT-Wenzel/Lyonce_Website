@@ -85,4 +85,5 @@ nav a:hover {
 .product-link img {
   max-width: 400px; /* Adjust size as needed */
   margin-top: 220px;
+  max-height: 400px;
 }
