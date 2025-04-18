@@ -82,8 +82,10 @@ nav a:hover {
   color: #fff; /* Adjust text color for readability */
 }
 
-.product-link img {
-  max-width: 400px; /* Adjust size as needed */
-  margin-top: 220px;
-  max-height: 400px;
+  .product-link img {
+  position: absolute;
+  top: 220px;         /* Abstand von oben */
+  right: 50px;        /* Abstand von rechts */
+  max-width: 400px;   /* Bildgröße begrenzen */
+  z-index: 3;
 }
