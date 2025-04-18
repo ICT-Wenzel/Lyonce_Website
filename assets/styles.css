@@ -76,7 +76,7 @@ nav a:hover {
 }
 
 .overlay-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
   text-align: center;
   color: #fff; /* Adjust text color for readability */
