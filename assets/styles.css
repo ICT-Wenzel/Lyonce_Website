@@ -75,17 +75,17 @@ nav a:hover {
   z-index: 1;
 }
 
-.overlay-content {
-  position: absolute;
-  z-index: 2;
-  text-align: center;
-  color: #fff; /* Adjust text color for readability */
-}
-
   .product-link img {
   position: absolute;
   top: 220px;         /* Abstand von oben */
   right: 50px;        /* Abstand von rechts */
   max-width: 400px;   /* Bildgröße begrenzen */
   z-index: 3;
+}
+
+.overlay-content {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: #fff; /* Adjust text color for readability */
 }
